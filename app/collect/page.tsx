@@ -336,7 +336,7 @@ export default function CollectPage() {
                             </div>
                         </div>
                         {verificationImage && (
-                            <Image src={verificationImage} alt="Verification" className="mb-4 rounded-md w-full" />
+                            <img width={100} src={verificationImage} alt="Verification" className="mb-4 rounded-md w-full" />
                         )}
                         <Button
                             onClick={handleVerify}
