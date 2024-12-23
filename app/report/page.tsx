@@ -151,6 +151,7 @@ export default function ReportPage() {
         }
       } catch (error) {
         console.error('Failed to parse JSON response:', text);
+        console.error('Error verifying waste:', error);
         setVerificationStatus('failure');
       }
     } catch (error) {

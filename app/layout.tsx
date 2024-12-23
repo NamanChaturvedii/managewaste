@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Inter } from 'next/font/google'
 import "./globals.css"
 import Header from "@/components/Header"
@@ -18,6 +18,8 @@ export default function RootLayout({
 }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const [totalEarnings, setTotalEarnings] = useState(0)
+
+    console.log(setTotalEarnings)
 
     // useEffect(() => {
     //     const fetchTotalEarnings = async () => {
@@ -45,7 +47,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className="min-h-screen bg-gray-50 flex flex-col">
-                    <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} totalEarnings={totalEarnings} />
+                    <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} totalEarnings={totalEarnings}  />
                     <div className="flex flex-1">
                         <Sidebar open={sidebarOpen} />
                         <main className="flex-1 p-4 lg:p-8 ml-0 lg:ml-64 transition-all duration-300">
@@ -54,6 +56,7 @@ export default function RootLayout({
                     </div>
                 </div>
                 <Toaster />
+                
             </body>
         </html>
     )

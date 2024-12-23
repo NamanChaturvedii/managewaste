@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Trash2, MapPin, CheckCircle, Clock, ArrowRight, Camera, Upload, Loader, Calendar, Weight, Search } from 'lucide-react'
+import { Trash2, MapPin, CheckCircle, Clock,  Upload, Loader, Calendar, Weight, Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { toast } from 'react-hot-toast'
@@ -173,7 +173,7 @@ export default function CollectPage() {
 
                     // Save the collected waste
                     await saveCollectedWaste(selectedTask.id, user.id, parsedResult)
-
+                    console.log(reward)
                     setReward(earnedReward)
                     toast.success(`Verification successful! You earned ${earnedReward} tokens!`, {
                         duration: 5000,

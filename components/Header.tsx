@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import { Button } from "@/components/ui/button"
-import { Menu, Coins, Leaf, Search, Bell, User, ChevronDown, LogIn, LogOut } from "lucide-react"
+import { Menu, Coins, Leaf, Search, Bell, User, ChevronDown, LogIn} from "lucide-react"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -36,7 +36,7 @@ const privateKeyProvider = new EthereumPrivateKeyProvider({
 });
 
 const web3auth = new Web3Auth({
-    clientId,
+    clientId ,
     web3AuthNetwork: WEB3AUTH_NETWORK.SAPPHIRE_DEVNET, // this was making the issue because it was testnet
     privateKeyProvider,
 });
